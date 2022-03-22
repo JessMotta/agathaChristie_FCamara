@@ -39,7 +39,7 @@ p {
   width: 50vw;
 }
 
-.about__title, .famousBooks__title, .funFact__title {
+.about__title, .famousBooks__title, .funFact__title, .inspiration__title {
   color: white;
   margin-bottom: 1rem;
   font-size: 4rem;
@@ -103,4 +103,13 @@ p {
 
 .funFact__image{
   height: 50vh;
+}
+
+.inspiration{
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.inspiration__movies{
+  margin-top: 2rem;
 }
