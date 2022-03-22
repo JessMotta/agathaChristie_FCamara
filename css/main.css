@@ -8,7 +8,7 @@
   color: white;
 }
 
-body{
+body {
   margin: 2.5rem;
 }
 
@@ -17,7 +17,6 @@ p {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
-
 
 .hero__title {
   font-family: var(--font-satisfy);
@@ -39,32 +38,35 @@ p {
   width: 50vw;
 }
 
-.about__title, .famousBooks__title, .funFact__title, .inspiration__title {
+.about__title,
+.famousBooks__title,
+.funFact__title,
+.inspiration__title {
   color: white;
   margin-bottom: 1rem;
   font-size: 4rem;
   font-family: var(--font-satisfy);
 }
 
-
-.famousBooks{
+.famousBooks {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 6rem;
 }
 
-.famousBooks__title{
+.famousBooks__title {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-.famousBooks__book, .flip__container{
+.famousBooks__book,
+.flip__container {
   height: 200px;
   margin-top: 1rem;
 }
 
-.flipper{
+.flipper {
   width: 100%;
   height: 100%;
   position: relative;
@@ -72,44 +74,147 @@ p {
   transform-style: preserve-3d;
 }
 
-.flip__container:hover .flipper{
+.flip__container:hover .flipper {
   transform: rotateY(180deg);
 }
 
-.flip--front, .flip--back{
+.flip--front,
+.flip--back {
   position: absolute;
   /* width: 100%; */
   height: 100%;
-  backface-visibility: hidden ;
+  backface-visibility: hidden;
 }
 
-.funFact{
+.funFact {
   margin-top: 6rem;
+  position: relative;
 }
-.funFact__title{
+.funFact__title {
   margin-top: 2rem;
 }
 
-.funFact__info{
+.funFact__info {
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
-
 }
 
-.funFact__text{
+.funFact__text {
   margin-right: 2rem;
 }
 
-.funFact__image{
+.funFact__image {
   height: 50vh;
 }
 
-.inspiration{
+.inspiration {
   margin-top: 6rem;
   text-align: center;
+  /* position: relative; */
+  
 }
 
-.inspiration__movies{
+.inspiration__movies {
   margin-top: 2rem;
+}
+
+.ag-smoke-4 {
+  
+  /* width: 61.4em; */
+
+  z-index: -3;
+  position: absolute;
+  top: 12em;
+  right: 0;
+
+  -webkit-animation: an-smoke-3 6s ease-in-out infinite;
+  -moz-animation: an-smoke-3 6s ease-in-out infinite;
+  -o-animation: an-smoke-3 6s ease-in-out infinite;
+  animation: an-smoke-3 6s ease-in-out infinite;
+}
+.ag-smoke__delay-1 {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.ag-smoke__delay-2 {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+@-webkit-keyframes an-smoke-3 {
+  0% {
+    opacity: 0;
+
+    -webkit-transform: translateY(10%) rotate(0.01deg);
+    transform: translateY(10%) rotate(0.01deg);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+
+    -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
+    transform: translate(-10%, 5%) rotate(0.01deg);
+  }
+}
+@-moz-keyframes an-smoke-3 {
+  0% {
+    opacity: 0;
+
+    -moz-transform: translateY(10%) rotate(0.01deg);
+    transform: translateY(10%) rotate(0.01deg);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+
+    -moz-transform: translate(-10%, 5%) rotate(0.01deg);
+    transform: translate(-10%, 5%) rotate(0.01deg);
+  }
+}
+@-o-keyframes an-smoke-3 {
+  0% {
+    opacity: 0;
+
+    -o-transform: translateY(10%) rotate(0.01deg);
+    transform: translateY(10%) rotate(0.01deg);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+
+    -o-transform: translate(-10%, 5%) rotate(0.01deg);
+    transform: translate(-10%, 5%) rotate(0.01deg);
+  }
+}
+@keyframes an-smoke-3 {
+  0% {
+    opacity: 0;
+
+    -webkit-transform: translateY(10%) rotate(0.01deg);
+    -moz-transform: translateY(10%) rotate(0.01deg);
+    -o-transform: translateY(10%) rotate(0.01deg);
+    transform: translateY(10%) rotate(0.01deg);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+
+    -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
+    -moz-transform: translate(-10%, 5%) rotate(0.01deg);
+    -o-transform: translate(-10%, 5%) rotate(0.01deg);
+    transform: translate(-10%, 5%) rotate(0.01deg);
+  }
 }
