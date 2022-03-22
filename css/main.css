@@ -41,7 +41,7 @@ p {
 .about__title,
 .famousBooks__title,
 .funFact__title,
-.inspiration__title {
+.inspiration__title, .quiz__title {
   color: white;
   margin-bottom: 1rem;
   font-size: 4rem;
@@ -145,6 +145,27 @@ p {
   -o-animation-delay: 4s;
   animation-delay: 4s;
 }
+
+.quiz{
+  text-align: center;
+}
+
+
+.quiz__title{
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.quiz__button{
+  text-decoration: none;
+  color: white;
+  background-color: var(--pink);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
 
 @-webkit-keyframes an-smoke-3 {
   0% {
