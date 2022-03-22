@@ -1,0 +1,8 @@
+body{
+    background:  linear-gradient(180deg, #1D86F0 -9.3%, #02203F 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    font-family: var(--font-montserrat);
+}
