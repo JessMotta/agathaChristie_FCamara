@@ -1,0 +1,135 @@
+@import url("../css/style.css");
+
+body {
+  background: linear-gradient(180.63deg, #1d86f0 -22.48%, #02203f 99.46%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  font-family: var(--font-montserrat);
+}
+
+.quiz__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz__title {
+  font-family: var(--font-satisfy);
+  margin-top: 120px;
+  text-align: center;
+  font-size: 6rem;
+  color: var(--pink);
+  -webkit-text-stroke: 2px white;
+}
+
+.quiz__instruction {
+  color: white;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.questions {
+  user-select: none;
+  background: white;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  margin-bottom: 0.625rem;
+}
+
+.questions ol li {
+  border: 1px solid pink;
+  display: block;
+  margin-bottom: 0.625rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.questions ol li:hover {
+  background: #1d86f0;
+  cursor: pointer;
+}
+
+.blocked {
+  display: none;
+}
+
+.blocked li:hover {
+  display: none;
+}
+
+#numQuestion {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background-color: pink;
+  color: white;
+  padding: 6px 10px 4px 8px;
+  border-radius: 50%;
+}
+
+#askQuestion {
+  margin-left: 1rem;
+}
+
+#warning {
+  color: whitesmoke;
+}
+
+/* ANIMATION */
+/* animate input */
+@keyframes blink {
+  0% {
+    filter: drop-shadow(0 0 15px pink);
+    -webkit-filter: drop-shadow(0 0 15px pink);
+    -moz-filter: drop-shadow(0 0 15px pink);
+    -o-filter: drop-shadow(0 0 15px pink);
+    -ms-filter: drop-shadow(0 0 15px pink);
+  }
+  100% {
+  }
+}
+.animate {
+  animation: blink 0.75s infinite alternate;
+}
+
+.show{
+  animation: show .5s infinite alternate;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+.check{
+  background: green;
+  animation: show 0.1s infinite alternate;
+}
+
+.wrong{
+  background: red;
+  animation: show 0.1s infinite alternate;
+}
+
+.score{
+  padding: 1rem;
+  border-radius: 8px;
+  background: #1d86f0;
+  font-size: 2rem;
+}

@@ -1,8 +1,22 @@
-body{
-    background:  linear-gradient(180.63deg, #1D86F0 -22.48%, #02203F 99.46%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-satisfy: "Satisfy", cursive;
 
-    font-family: var(--font-montserrat);
+  --pink: #f00eeb;
+  color: white;
+}
+
+body {
+  background: linear-gradient(180.63deg, #1d86f0 -22.48%, #02203f 99.46%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  font-family: var(--font-montserrat);
+}
+
+
+.footer{
+  text-align: center;
+  margin-bottom: 2rem;
 }
