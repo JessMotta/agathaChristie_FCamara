@@ -108,8 +108,7 @@ const q8 = {
 };
 const q9 = {
   numQuestion: 9,
-  askQuestion:
-    "Qual é a única capital do Brasil cortada pela linha do Equador?",
+  askQuestion: "Qual é a única capital do Brasil cortada pela linha do Equador?",
   alternativaA: "Belém",
   alternativaB: "São Luís",
   alternativaC: "Macapá",
