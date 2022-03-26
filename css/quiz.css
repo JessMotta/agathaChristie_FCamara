@@ -1,9 +1,9 @@
 @import url("../css/buttons.css");
 @import url("../css/style.css");
 
-main {
-  height: 100vh;
-}
+/* .quiz{
+  height: max-content;
+} */
 
 #quiz__content {
   margin: 0 0.5rem;
