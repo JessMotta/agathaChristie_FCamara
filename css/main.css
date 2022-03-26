@@ -1,22 +1,21 @@
 @import url("./style.css");
 @import url("./buttons.css");
 
-
-
 body {
   margin: 2.5rem;
   color: white;
+  /* width: 100vw; */
 }
 
 p {
   line-height: 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
 .hero__title {
   font-family: var(--font-satisfy);
-  margin-top: 120px;
+  margin-top: 5rem;
   text-align: center;
   font-size: 6rem;
   color: var(--pink);
@@ -26,29 +25,25 @@ p {
 .about {
   margin-top: 1rem;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.about__info {
-  width: 50vw;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__title,
 .famousBooks__title,
 .funFact__title,
-.inspiration__title, .quiz__title {
+.inspiration__title,
+.quiz__title {
   color: white;
   margin-bottom: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--font-satisfy);
 }
 
 .famousBooks {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 6rem;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .famousBooks__title {
@@ -56,30 +51,14 @@ p {
   margin-bottom: 2rem;
 }
 
-.famousBooks__book,
-.flip__container {
-  height: 200px;
+.famousBooks__collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.famousBooks__book {
+  width: 100px;
   margin-top: 1rem;
-}
-
-.flipper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip__container:hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip--front,
-.flip--back {
-  position: absolute;
-  /* width: 100%; */
-  height: 100%;
-  backface-visibility: hidden;
 }
 
 .funFact {
@@ -93,7 +72,7 @@ p {
 .funFact__info {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 .funFact__text {
@@ -101,138 +80,252 @@ p {
 }
 
 .funFact__image {
-  height: 50vh;
+  width: 100%;
+  text-align: center;
 }
 
 .inspiration {
   margin-top: 6rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
   position: relative;
-  
 }
 
-.inspiration__movies {
+.inspiration__image {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .ag-smoke-4 {
-  
-  /* width: 61.4em; */
-
-  z-index: -3;
-  position: absolute;
-  top: 12em;
-  right: 0;
-
-  -webkit-animation: an-smoke-3 6s ease-in-out infinite;
-  -moz-animation: an-smoke-3 6s ease-in-out infinite;
-  -o-animation: an-smoke-3 6s ease-in-out infinite;
-  animation: an-smoke-3 6s ease-in-out infinite;
-}
-.ag-smoke__delay-1 {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
-}
-.ag-smoke__delay-2 {
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -o-animation-delay: 4s;
-  animation-delay: 4s;
+  display: none;
 }
 
-.quiz{
+.quiz {
   text-align: center;
   margin-bottom: 5rem;
 }
 
-
-.quiz__title{
+.quiz__title {
   margin-top: 6rem;
   margin-bottom: 2rem;
 }
 
-.quiz__button{
-  text-decoration: none;
-  color: white;
-  background-color: var(--pink);
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  margin-top: 2rem;
-  font-weight: 600;
+
+
+
+@media screen and (min-width: 768px) {
+  .about__image {
+    width: 50%;
+  }
+
+  .funFact__image {
+    width: 50%;
+  }
+
+  .inspiration__image {
+    width: 50%;
+    align-self: center;
+  }
 }
 
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 1.5rem;
+  }
 
-@-webkit-keyframes an-smoke-3 {
-  0% {
-    opacity: 0;
+  .about {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    -webkit-transform: translateY(10%) rotate(0.01deg);
-    transform: translateY(10%) rotate(0.01deg);
+  .about__info {
+    width: 50vw;
   }
-  50% {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 0;
 
-    -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
-    transform: translate(-10%, 5%) rotate(0.01deg);
+  .about__image {
+    width: 25vw;
   }
-}
-@-moz-keyframes an-smoke-3 {
-  0% {
-    opacity: 0;
+  .famousBooks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+  }
+  /* .famousBooks__book,
+  .flip__container {
+    height: 200px;
+    margin-top: 1rem;
+  }
 
-    -moz-transform: translateY(10%) rotate(0.01deg);
-    transform: translateY(10%) rotate(0.01deg);
+  .flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
-  50% {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 0;
 
-    -moz-transform: translate(-10%, 5%) rotate(0.01deg);
-    transform: translate(-10%, 5%) rotate(0.01deg);
+  .flip__container:hover .flipper {
+    transform: rotateY(180deg);
   }
-}
-@-o-keyframes an-smoke-3 {
-  0% {
-    opacity: 0;
 
-    -o-transform: translateY(10%) rotate(0.01deg);
-    transform: translateY(10%) rotate(0.01deg);
-  }
-  50% {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 0;
+  .flip--front,
+  .flip--back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  } */
 
-    -o-transform: translate(-10%, 5%) rotate(0.01deg);
-    transform: translate(-10%, 5%) rotate(0.01deg);
+  .famousBooks__book {
+    width: 150px;
   }
-}
-@keyframes an-smoke-3 {
-  0% {
-    opacity: 0;
+  .funFact {
+    margin-top: 6rem;
+    position: relative;
+  }
+  .funFact__title {
+    margin-top: 2rem;
+  }
 
-    -webkit-transform: translateY(10%) rotate(0.01deg);
-    -moz-transform: translateY(10%) rotate(0.01deg);
-    -o-transform: translateY(10%) rotate(0.01deg);
-    transform: translateY(10%) rotate(0.01deg);
+  .funFact__info {
+    margin-top: 2rem;
+    flex-direction: row;
   }
-  50% {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 0;
 
-    -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
-    -moz-transform: translate(-10%, 5%) rotate(0.01deg);
-    -o-transform: translate(-10%, 5%) rotate(0.01deg);
-    transform: translate(-10%, 5%) rotate(0.01deg);
+  .funFact__text {
+    margin-right: 2rem;
   }
+
+  .funFact__image {
+    height: auto;
+  }
+
+  .inspiration {
+    margin-top: 6rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .inspiration__image {
+    margin-top: 2rem;
+  }
+
+  .ag-smoke-4 {
+    display: flex;
+    /* width: 61.4em; */
+
+    z-index: -3;
+    position: absolute;
+    top: 12em;
+    right: 0;
+
+    -webkit-animation: an-smoke-3 6s ease-in-out infinite;
+    -moz-animation: an-smoke-3 6s ease-in-out infinite;
+    -o-animation: an-smoke-3 6s ease-in-out infinite;
+    animation: an-smoke-3 6s ease-in-out infinite;
+  }
+  .ag-smoke__delay-1 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .ag-smoke__delay-2 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+
+  .quiz {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .quiz__title {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .quiz__button {
+    padding: 1rem 2rem;
+  }
+
+  @-webkit-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(10%) rotate(0.01deg);
+      transform: translateY(10%) rotate(0.01deg);
+    }
+    50% {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
+      transform: translate(-10%, 5%) rotate(0.01deg);
+    }
+  }
+  @-moz-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -moz-transform: translateY(10%) rotate(0.01deg);
+      transform: translateY(10%) rotate(0.01deg);
+    }
+    50% {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0;
+  
+      -moz-transform: translate(-10%, 5%) rotate(0.01deg);
+      transform: translate(-10%, 5%) rotate(0.01deg);
+    }
+  }
+  @-o-keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -o-transform: translateY(10%) rotate(0.01deg);
+      transform: translateY(10%) rotate(0.01deg);
+    }
+    50% {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0;
+  
+      -o-transform: translate(-10%, 5%) rotate(0.01deg);
+      transform: translate(-10%, 5%) rotate(0.01deg);
+    }
+  }
+  @keyframes an-smoke-3 {
+    0% {
+      opacity: 0;
+  
+      -webkit-transform: translateY(10%) rotate(0.01deg);
+      -moz-transform: translateY(10%) rotate(0.01deg);
+      -o-transform: translateY(10%) rotate(0.01deg);
+      transform: translateY(10%) rotate(0.01deg);
+    }
+    50% {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0;
+  
+      -webkit-transform: translate(-10%, 5%) rotate(0.01deg);
+      -moz-transform: translate(-10%, 5%) rotate(0.01deg);
+      -o-transform: translate(-10%, 5%) rotate(0.01deg);
+      transform: translate(-10%, 5%) rotate(0.01deg);
+    }
+  }
+
+ 
 }
