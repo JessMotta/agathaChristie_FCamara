@@ -68,11 +68,6 @@ main {
   border-radius: 8px;
 }
 
-.questions ol li:hover {
-  background: var(--secundaria);
-  color: white;
-  cursor: pointer;
-}
 
 .blocked {
   display: none;
@@ -174,5 +169,11 @@ main {
 @media screen and (min-width: 1024px) {
   #quiz__content{
     height: 100vh;
+  }
+
+  .questions ol li:hover {
+    background: var(--secundaria);
+    color: white;
+    cursor: pointer;
   }
 }
