@@ -1,15 +1,8 @@
 @import url("../css/buttons.css");
 @import url("../css/style.css");
-/* 
-body{
-  height: max-content;
-} */
-/* .quiz{
-  height: max-content;
-} */
 
 #quiz__content {
-  margin: 0 0.5rem;
+  margin: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +63,6 @@ body{
   padding: 1rem;
   border-radius: 8px;
 }
-
 
 .blocked {
   display: none;
@@ -170,7 +162,7 @@ body{
   }
 }
 @media screen and (min-width: 1024px) {
-  #quiz__content{
+  #quiz__content {
     height: 100vh;
   }
 
