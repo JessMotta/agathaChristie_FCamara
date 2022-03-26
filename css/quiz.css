@@ -1,3 +1,4 @@
+@import url('../css/buttons.css');
 :root {
   --principal: #1d86f0;
   --secundaria: #02203f;
@@ -12,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
 }
 
@@ -37,7 +38,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 h1 {
@@ -53,7 +53,6 @@ h1 {
 .center {
   text-align: center;
 }
-
 
 /* div class questao com numero da questao e askQuestion */
 .question {
@@ -77,7 +76,6 @@ h1 {
 #askQuestion {
   margin-left: 1rem;
 }
-
 
 /* article que acomoda a questao completa */
 .questions {
@@ -135,38 +133,47 @@ h1 {
   color: white;
 }
 
+#gameOver {
+  width: 50%;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+
 /* ANIMACAO */
 
 /* Animar o input */
 @keyframes piscar {
   0% {
-      filter: drop-shadow(0 0 15px var(--principal));
-      -webkit-filter: drop-shadow(0 0 15px var(--principal));
-      -moz-filter: drop-shadow(0 0 15px var(--principal));
-      -o-filter: drop-shadow(0 0 15px var(--principal));
-      -ms-filter: drop-shadow(0 0 15px var(--principal));
+    filter: drop-shadow(0 0 15px var(--principal));
+    -webkit-filter: drop-shadow(0 0 15px var(--principal));
+    -moz-filter: drop-shadow(0 0 15px var(--principal));
+    -o-filter: drop-shadow(0 0 15px var(--principal));
+    -ms-filter: drop-shadow(0 0 15px var(--principal));
   }
   100% {
   }
 }
 
 .animar {
-  animation: piscar .75s infinite alternate;
+  animation: piscar 0.75s infinite alternate;
 }
 
 .aparecer {
-  animation: aparecer .5s infinite alternate;
+  animation: aparecer 0.5s infinite alternate;
 }
 
 @keyframes aparecer {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   50% {
-      opacity: 0.5;
+    opacity: 0.5;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -183,6 +190,6 @@ h1 {
 .score {
   padding: 1rem;
   border-radius: 8px;
-  background:#03a9f4;
+  background: #03a9f4;
   font-size: 2rem;
 }

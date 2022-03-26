@@ -5,6 +5,7 @@ let warning = document.querySelector("#warning");
 let progress = document.querySelector("#progress");
 let points = 0; // pontos para o placar
 let score = 0; // placar
+let gameOverButton = document.getElementById("gameOver");
 
 // AUDIO
 let somAcerto = document.querySelector("#somAcerto");
@@ -127,7 +128,6 @@ const q10 = {
   correta: "Rainha do Crime",
 };
 
-
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
 const questions = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
 
@@ -212,10 +212,9 @@ function checkIfIsCorrect(nQuestion, resposta) {
   let certa = questions[numeroDaQuestao].correta;
 
   if (respostaEscolhida == certa) {
-   
     blinkIfCorrect();
     somAcerto.play();
-    points += 10; 
+    points += 10;
     if (nQuestion.value == 1 && points == 20) {
       points = 10;
     }
@@ -257,16 +256,22 @@ function fimDoJogo() {
 
   instructions.classList.add("score");
 
+  // MOSTRAR BOTAO
+  gameOverButton.style.display = "flex";
+
   // OCULTAR O ARTICLE DA QUESTAO
   articleQuestions.style.display = "none";
 
-  setTimeout(function () {
-    points = 0; // zerar placar
-    instructions.classList.remove("score");
-    
-    // REINICIAR O JOGO
-    articleQuestions.style.display = "block";
-    nextQuestion(1);
-    instructions.textContent = "Leia a questão e clique na resposta correta";
-  }, 8000);
+}
+
+function restart() {
+  points = 0; // zerar placar
+  instructions.classList.remove("score");
+
+  // REINICIAR O JOGO
+  articleQuestions.style.display = "block";
+  nextQuestion(1);
+  instructions.textContent = "Leia a questão e clique na resposta correta";
+  // OCULTAR BOTAO
+  gameOverButton.style.display = "none";
 }
