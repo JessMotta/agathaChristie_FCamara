@@ -171,3 +171,8 @@ main {
     margin: 4rem 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  #quiz__content{
+    height: 100vh;
+  }
+}

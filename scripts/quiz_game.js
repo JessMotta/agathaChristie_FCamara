@@ -6,7 +6,6 @@ let progress = document.querySelector("#progress");
 let points = 0; // pontos para o placar
 let score = 0; // placar
 let gameOverButton = document.getElementById("gameOver");
-let quizContent = document.getElementById("quiz__content")
 
 // AUDIO
 let soundCorrect = document.querySelector("#soundCorrect");
@@ -259,7 +258,7 @@ function fimDoJogo() {
 
   // MOSTRAR BOTAO
   gameOverButton.style.display = "flex";
-  quizContent.style.height = "100vh"
+ 
 
   // OCULTAR O ARTICLE DA QUESTAO
   articleQuestions.style.display = "none";
