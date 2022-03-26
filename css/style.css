@@ -2,8 +2,11 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-satisfy: "Satisfy", cursive;
 
+  --principal: #1d86f0;
+  --secundaria: #02203f;
   --pink: #f00eeb;
-  color: white;
+  --verde: #4caf50;
+  --vermelho: #f44336;
 }
 
 body {
@@ -18,7 +21,5 @@ body {
 footer {
   text-align: center;
   color: white;
-  margin-top: 1rem;
-  /* margin-bottom: 2rem;
-  padding-bottom: 2rem; */
+  margin: 2rem 0;
 }

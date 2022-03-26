@@ -15,9 +15,9 @@
 
         <section id="quiz__content">
 
-            <h1>Agatha Quiz</h1>
+            <h1 id="quiz__title">Agatha Quiz</h1>
 
-            <article class='center' id='instructions'>
+            <article id='instructions'>
                 Leia a questão e clique na resposta correta
             </article>
 
@@ -39,7 +39,7 @@
 
             </article>
 
-            <article id='warning' class='center'>
+            <article id='warning'>
                 <input type="range" value='1' min='1' max='10' step='1' name="progress" id="progress" disabled /> <br>
                 <span id='number'></span> de <span id='total'></span>
             </article>
@@ -57,9 +57,9 @@
 
 
     </main>
-    <audio preload src="../assets/audio/positive.mp3" id='somAcerto'></audio>
-    <audio preload src="../assets/audio/negative.mp3" id='somErro'></audio>
-    <audio preload src="../assets/audio/aplausos.mp3" id='somAplausos'></audio>
+    <audio preload src="../assets/audio/positive.mp3" id='soundCorrect'></audio>
+    <audio preload src="../assets/audio/negative.mp3" id='soundWrong'></audio>
+    <audio preload src="../assets/audio/applause.mp3" id='soundApplause'></audio>
     <!-- JS externo -->
     <script src="../scripts/quiz_game.js"></script>
 

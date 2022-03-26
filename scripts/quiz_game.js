@@ -6,11 +6,12 @@ let progress = document.querySelector("#progress");
 let points = 0; // pontos para o placar
 let score = 0; // placar
 let gameOverButton = document.getElementById("gameOver");
+let quizContent = document.getElementById("quiz__content")
 
 // AUDIO
-let somAcerto = document.querySelector("#somAcerto");
-let somErro = document.querySelector("#somErro");
-let somAplausos = document.querySelector("#somAplausos");
+let soundCorrect = document.querySelector("#soundCorrect");
+let soundWrong = document.querySelector("#soundWrong");
+let soundApplause = document.querySelector("#soundApplause");
 
 // askQuestion
 let numQuestion = document.querySelector("#numQuestion");
@@ -213,14 +214,14 @@ function checkIfIsCorrect(nQuestion, resposta) {
 
   if (respostaEscolhida == certa) {
     blinkIfCorrect();
-    somAcerto.play();
+    soundCorrect.play();
     points += 10;
     if (nQuestion.value == 1 && points == 20) {
       points = 10;
     }
   } else {
     blinkIfWrong();
-    somErro.play();
+    soundWrong.play();
   }
   setTimeout(() => {
     noBlink();
@@ -247,7 +248,7 @@ function checkIfIsCorrect(nQuestion, resposta) {
 }
 
 function fimDoJogo() {
-  somAplausos.play();
+  soundApplause.play();
 
   let s = "s";
   points == 0 ? (s = "") : (s = s);
@@ -258,6 +259,7 @@ function fimDoJogo() {
 
   // MOSTRAR BOTAO
   gameOverButton.style.display = "flex";
+  quizContent.style.height = "100vh"
 
   // OCULTAR O ARTICLE DA QUESTAO
   articleQuestions.style.display = "none";
