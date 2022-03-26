@@ -11,40 +11,49 @@
 </head>
 
 <body>
-    <main>
-        <section class="quiz__content">
-            <h1 class="quiz__title">Quiz</h1>
-            <article class="quiz__instruction" id="instructions">Vamos ver o quanto você sabe sobre Agatha Christie</article>
+    <main class="tela-principal">
 
-            <article class="questions">
-                <header class="questions__question">
-                    <span id="numQuestion"></span>
-                    <h2 id="askQuestion"></h2>
+        <section id="quiz__content">
+
+            <h1>Agatha Quiz</h1>
+
+            <article class='center' id='instructions'>
+                Leia a questão e clique na resposta correta
+            </article>
+
+            <article class='questions'>
+                <header class='question'>
+                    <span id='numQuestion'></span>
+                    <h2 id='askQuestion'></h2>
                 </header>
 
-                <div class="quiz__content">
-                    <ol type="A" id="optionsQuiz">
-                        <li id="a" value="1A" class="questions__answer" onclick="checkAnswer(this,this)"></li>
-                        <li id="b" value="1B" class="questions__answer" onclick="checkAnswer(this,this)"></li>
-                        <li id="c" value="1C" class="questions__answer" onclick="checkAnswer(this,this)"></li>
-                        <li id="d" value="1D" class="questions__answer" onclick="checkAnswer(this,this)"></li>
+
+                <div class='corpo'>
+                    <ol type='A' id='alternatives'>
+                        <li id='a' value='1A' class='respostas' onClick='checkIfIsCorrect(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='checkIfIsCorrect(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='checkIfIsCorrect(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='checkIfIsCorrect(this, this)'></li>
                     </ol>
                 </div>
+
             </article>
 
-            <article id="warning" class="quiz__warning">
-                <input type="range" value="1" min="1" max="10" step="1" name="progress" id="progress" disabled>
-                <br>
-                <span id="quiz__number"></span> de <span id="quiz__totalNumber"></span>
+            <article id='warning' class='center'>
+                <input type="range" value='1' min='1' max='10' step='1' name="progress" id="progress" disabled /> <br>
+                <span id='number'></span> de <span id='total'></span>
             </article>
 
-            <footer class="footer">
-                <h3>&copy; Desenvolvido por Jéssica Motta 2022</h3>
-            </footer>
+            <footer id='copy' class='center'> &copy; Desenvolvido por Jéssica Motta 2022</footer>
+
         </section>
 
 
     </main>
+    <audio preload src="../assets/audio/positive.mp3" id='somAcerto'></audio>
+    <audio preload src="../assets/audio/negative.mp3" id='somErro'></audio>
+    <audio preload src="../assets/audio/aplausos.mp3" id='somAplausos'></audio>
+    <!-- JS externo -->
     <script src="../scripts/quiz_game.js"></script>
 
 </body>

@@ -1,50 +1,97 @@
-@import url("../css/style.css");
+:root {
+  --principal: #1d86f0;
+  --secundaria: #f00eeb;
+  --verde: #4caf50;
+  --vermelho: #f44336;
+  --font-satisfy: "Satisfy", cursive;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+}
 
 body {
   background: linear-gradient(180.63deg, #1d86f0 -22.48%, #02203f 99.46%);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 
   font-family: var(--font-montserrat);
 }
 
-.quiz__content {
+main {
   width: 100%;
+  height: 100vh;
+}
+
+section {
+  width: 100vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
-.quiz__title {
-  font-family: var(--font-satisfy);
-  margin-top: 120px;
+h1 {
   text-align: center;
-  font-size: 6rem;
-  color: var(--pink);
+  font-size: 4rem;
+  margin: 0.5rem 0 1rem 0;
+  color: var(--secundaria);
   -webkit-text-stroke: 2px white;
+  font-family: var(--font-satisfy);
 }
 
-.quiz__instruction {
-  color: white;
-  margin-top: 2rem;
-  font-size: 1.5rem;
+/* classe para centralizar textos, paragrafos */
+.center {
+  text-align: center;
+}
+
+
+/* div class questao com numero da questao e askQuestion */
+.question {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
+#numQuestion {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background: var(--principal);
+  color: #fff;
+  padding: 6px 10px 4px 8px;
+  border-radius: 50%;
+}
+
+#askQuestion {
+  margin-left: 1rem;
+}
+
+
+/* article que acomoda a questao completa */
 .questions {
   user-select: none;
-  background: white;
+  background: #fff;
+
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border: 1px solid #ececec;
   border-radius: 5px;
   margin-bottom: 0.625rem;
+  position: relative;
 }
 
 .questions ol li {
-  border: 1px solid pink;
+  border: 1px solid var(--principal);
   display: block;
   margin-bottom: 0.625rem;
   padding: 1rem;
@@ -52,7 +99,7 @@ body {
 }
 
 .questions ol li:hover {
-  background: #1d86f0;
+  background: var(--principal);
   cursor: pointer;
 }
 
@@ -64,72 +111,76 @@ body {
   display: none;
 }
 
-#numQuestion {
-  text-align: center;
-  width: 2rem;
-  height: 2rem;
-  display: block;
-  background-color: pink;
+#instructions {
+  font-size: 1rem;
   color: white;
-  padding: 6px 10px 4px 8px;
-  border-radius: 50%;
-}
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.625rem;
+  border-radius: 8px;
 
-#askQuestion {
-  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 #warning {
-  color: whitesmoke;
+  color: var(--principal);
 }
 
-/* ANIMATION */
-/* animate input */
-@keyframes blink {
+#copy {
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+  color: white;
+}
+
+/* ANIMACAO */
+
+/* Animar o input */
+@keyframes piscar {
   0% {
-    filter: drop-shadow(0 0 15px pink);
-    -webkit-filter: drop-shadow(0 0 15px pink);
-    -moz-filter: drop-shadow(0 0 15px pink);
-    -o-filter: drop-shadow(0 0 15px pink);
-    -ms-filter: drop-shadow(0 0 15px pink);
+      filter: drop-shadow(0 0 15px var(--principal));
+      -webkit-filter: drop-shadow(0 0 15px var(--principal));
+      -moz-filter: drop-shadow(0 0 15px var(--principal));
+      -o-filter: drop-shadow(0 0 15px var(--principal));
+      -ms-filter: drop-shadow(0 0 15px var(--principal));
   }
   100% {
   }
 }
-.animate {
-  animation: blink 0.75s infinite alternate;
+
+.animar {
+  animation: piscar .75s infinite alternate;
 }
 
-.show{
-  animation: show .5s infinite alternate;
+.aparecer {
+  animation: aparecer .5s infinite alternate;
 }
 
-@keyframes show {
-  0%{
-    opacity: 0;
+@keyframes aparecer {
+  0% {
+      opacity: 0;
   }
-  50%{
-    opacity: 0.5;
+  50% {
+      opacity: 0.5;
   }
-  100%{
-    opacity: 1;
+  100% {
+      opacity: 1;
   }
-  
 }
 
-.check{
-  background: green;
-  animation: show 0.1s infinite alternate;
+.correct {
+  background: var(--verde);
+  animation: aparecer 0.1s infinite alternate;
 }
 
-.wrong{
-  background: red;
-  animation: show 0.1s infinite alternate;
+.wrong {
+  background: var(--vermelho);
+  animation: aparecer 0.1s infinite alternate;
 }
 
-.score{
+.score {
   padding: 1rem;
   border-radius: 8px;
-  background: #1d86f0;
+  background:#03a9f4;
   font-size: 2rem;
 }
