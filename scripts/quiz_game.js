@@ -1,4 +1,4 @@
-// VARIABLES
+// VARIABLES AND ACCESS TO THE DOM ITEMS
 let titulo = document.querySelector("h1");
 let instructions = document.querySelector("#instructions");
 let warning = document.querySelector("#warning");
@@ -13,21 +13,22 @@ let soundCorrect = document.querySelector("#soundCorrect");
 let soundWrong = document.querySelector("#soundWrong");
 let soundApplause = document.querySelector("#soundApplause");
 
-// askQuestion
+// QUESTION
 let numQuestion = document.querySelector("#numQuestion");
 let askQuestion = document.querySelector("#askQuestion");
 
-// ALTERNATIVAS
+// ALTERNATIVES
 let a = document.querySelector("#a");
 let b = document.querySelector("#b");
 let c = document.querySelector("#c");
 let d = document.querySelector("#d");
 
-// article com a class questoes
+// STRUCTURE WITH THE QUESTIONS
 let articleQuestions = document.querySelector(".questions");
-// ol li com as alternativas
+// TO ACCESS ALTERNATIVES
 let alternatives = document.querySelector("#alternatives");
 
+// QUESTION STRUCTURE
 const q0 = {
   numQuestion: 0,
   askQuestion: "askQuestion",
@@ -37,6 +38,8 @@ const q0 = {
   alternativaD: "Alternativa D",
   correta: "0",
 };
+
+// QUESTIONS WITH THE CORRECT ANSWER
 const q1 = {
   numQuestion: 1,
   askQuestion: "Qual foi o ano que Agatha Christie nasceu?",
@@ -129,19 +132,24 @@ const q10 = {
   correta: "Rainha do Crime",
 };
 
-// CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
+// ARRAY WITH ALL THE QUESTIONS
 const questions = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
 
+// VARIABLES TO CHECK THE NUMBER OF THE QUESTION AND THE TOTAL
 let number = document.querySelector("#number");
 let total = document.querySelector("#total");
 
+// NUMBER RECEIVE THE FIRST QUESTION
 number.textContent = q1.numQuestion;
 
+// VARIABLE WITH THE NUMBER OF THE QUESTIONS (TOTAL)
 let totalOQuestions = questions.length - 1;
-console.log("Total de questões " + totalOQuestions);
+// console.log("Total de questões " + totalOQuestions);
+
+// VARIABLE RECEIVE THE TOTAL OF THE QUESTIONS
 total.textContent = totalOQuestions;
 
-// MONTAR A 1a QUESTAO COMPLETA, para iniciar o Quiz
+// STRUCTURE THE FIRST QUESTION TO START QUIZ
 numQuestion.textContent = q1.numQuestion;
 askQuestion.textContent = q1.askQuestion;
 a.textContent = q1.alternativaA;
@@ -149,13 +157,13 @@ b.textContent = q1.alternativaB;
 c.textContent = q1.alternativaC;
 d.textContent = q1.alternativaD;
 
-// CONFIGURAR O VALUE INICIAL DA 1a QUESTAO COMPLETA
+// SET THE INITIAL VALUES TO THE FIRST QUESTION
 a.setAttribute("value", "1A");
 b.setAttribute("value", "1B");
 c.setAttribute("value", "1C");
 d.setAttribute("value", "1D");
 
-// PARA MONTAR AS PROXIMAS QUESTOES
+// STRUCTURE TO NEXT QUESTIONS
 function nextQuestion(nQuestion) {
   number.textContent = nQuestion;
   numQuestion.textContent = questions[nQuestion].numQuestion;
@@ -168,75 +176,89 @@ function nextQuestion(nQuestion) {
   b.setAttribute("value", nQuestion + "B");
   c.setAttribute("value", nQuestion + "C");
   d.setAttribute("value", nQuestion + "D");
+  // UPDATE THE VALUE IN FOOTER BAR
   progress.value = parseInt(progress.value) + 1;
-  //console.log(progresso.value)
 }
 
-// VERIFICAR DUPLO CLICK NAS ALTERNATIVAS
+// CHECK IF HAPPENED DOUBLE CLICK IN ANY ALTERNATIVE
 alternatives.addEventListener("dblclick", () => {
-  //console.log('Duplo clique')
-  points -= 10; // tirar 10 pontos em caso de duplo click
+  points -= 10; // REMOVE 10 POINTS 
   if (numQuestion.value == 10 && points == 110) {
     points = 100;
   }
 });
 
+// BLOCKED OTHERS ALTERNATIVES
 function blockAlternatives() {
   alternatives.classList.add("blocked");
 }
 
+// UNBLOCKED ALL ALTERNATIVES
 function unblockAlternatives() {
   alternatives.classList.remove("blocked");
 }
 
+// IF THE ANSWER IS CORRECT BLINK GREEN
 function blinkIfCorrect() {
   articleQuestions.classList.remove("wrong");
   articleQuestions.classList.add("correct");
 }
 
+// IF THE ANSWER IS WRONG BLINK RED
 function blinkIfWrong() {
   articleQuestions.classList.remove("correct");
   articleQuestions.classList.add("wrong");
 }
 
+// NO BLINK
 function noBlink() {
   articleQuestions.classList.remove("correct");
   articleQuestions.classList.remove("wrong");
 }
 
-function checkIfIsCorrect(nQuestion, resposta) {
-  let numeroDaQuestao = nQuestion.value;
-  console.log("Questão " + numeroDaQuestao);
+// CHECK THE ANSWER IS CORRECT
+function checkIfIsCorrect(nQuestion, answer) {
+  let numberOfQuestion = nQuestion.value;
+  console.log("Questão " + numberOfQuestion);
 
-  let respostaEscolhida = resposta.textContent;
+  // VARIABLE RECEIVE USER'S ANSWER
+  let chosenAnswer = answer.textContent;
 
-  let certa = questions[numeroDaQuestao].correta;
+  // VARIABLE RECEIVE THE CORRECT ANSWER
+  let correct = questions[numberOfQuestion].correta;
 
-  if (respostaEscolhida == certa) {
+  // COMPARE IF THEY'RE EQUAL
+  if (chosenAnswer == correct) {
     blinkIfCorrect();
     soundCorrect.play();
     points += 10;
     if (nQuestion.value == 1 && points == 20) {
       points = 10;
     }
-  } else {
+  } 
+  // IF THE ANSWER IS INCORRECT
+  else {
     blinkIfWrong();
     soundWrong.play();
   }
+  // STOP BLINK
   setTimeout(() => {
     noBlink();
   }, 150);
 
-  // atualizar placar
+  // UPDATE SCORE
   score = points;
+  // UPDATE SCORE TO USER SEE
   instructions.textContent = "Pontos " + score;
 
-  // bloquear a escolha de opcoes
+  // BLOCKED OTHER OPTIONS
   blockAlternatives();
 
+  // GO TO THE NEXT QUESTION
   setTimeout(function () {
-    next = numeroDaQuestao + 1;
+    next = numberOfQuestion + 1;
 
+    // CHECK IF THERE IS NO MORE QUESTION
     if (next > totalOQuestions) {
       console.log("Fim do Jogo!");
       fimDoJogo();
@@ -250,31 +272,36 @@ function checkIfIsCorrect(nQuestion, resposta) {
 function fimDoJogo() {
   soundApplause.play();
 
+  // TO ADD S 
   let s = "s";
+  // IF NUMBER OF POINTS IS EQUAL TO ZERO DON'T RECEIVE 'S' IN THE END OF "PONTO", IF IS DIFFERENT TO ZERO, RECEIVE "S"
   points == 0 ? (s = "") : (s = s);
   instructions.textContent =
     "Fim de Jogo! Você conseguiu " + points + " ponto" + s;
 
+    // SHOW FINAL SCORE
   instructions.classList.add("score");
 
-  // MOSTRAR BOTAO
+  // SHOW BUTTONS
   gameOverButton.style.display = "flex";
+  // QUIZ SCREEN
   quizContent.style.height = "100vh"
  
 
-  // OCULTAR O ARTICLE DA QUESTAO
+  // HIDDEN QUESTIONS STRUCTURE
   articleQuestions.style.display = "none";
 
 }
 
+// RESTART GAME
 function restart() {
-  points = 0; // zerar placar
+  points = 0; // RESET POINTS
   instructions.classList.remove("score");
 
-  // REINICIAR O JOGO
+  // SHOW QUESTIONS STRUCTURE AGAIN
   articleQuestions.style.display = "block";
   nextQuestion(1);
   instructions.textContent = "Leia a questão e clique na resposta correta";
-  // OCULTAR BOTAO
+  // HIDDEN BUTTONS
   gameOverButton.style.display = "none";
 }
