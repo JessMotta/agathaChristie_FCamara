@@ -28,9 +28,8 @@ Esse projeto foi realizado para o Desafio Mulheres Inspiradoras da FCamara, onde
 1. Foi colocado um fundo com nuvens se movimentando na versão desktop para criar um efeito misterioso, assim com as obras de Agatha.
 2. Foi adicionada uma página com um quiz que realiza a contagem de pontos, a cada resposta faz um som de acerto ou erro, e ao final do jogo o som de aplausos 
 3. Quando o usuário responde corretamente a caixa de questões pisca verde, quando o usuário responde incorretamente a caixa de questões pisca vermelho 
-4. Quando o jogo é concluído aparecem dois botões, um de "Jogar novamente", onde a pontuação será zerada e o volta para a primeira questão
-5. E o botão de "Início" que vai para a primeira tela (home)
-6. O site está responsivo para diferentes tamanhos de tela
+4. Quando o jogo é concluído aparecem dois botões, um de "Jogar novamente", onde a pontuação será zerada e o volta para a primeira questão. E o botão de "Início" que vai para a primeira tela (home)
+5. O site está responsivo para diferentes tamanhos de tela
 
  
 ## Links para o projeto 🔗
