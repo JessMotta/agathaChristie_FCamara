@@ -1,4 +1,4 @@
-/* Aula 20 MaiaQuiz  */
+// VARIABLES
 let titulo = document.querySelector("h1");
 let instructions = document.querySelector("#instructions");
 let warning = document.querySelector("#warning");

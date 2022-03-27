@@ -1,4 +1,4 @@
-@import url("./style.css");
+@import url("./base.css");
 @import url("./buttons.css");
 @import url("./cards.css");
 
@@ -188,7 +188,6 @@ p {
 
   .ag-smoke-4 {
     display: flex;
-    /* width: 61.4em; */
 
     z-index: -3;
     position: absolute;
