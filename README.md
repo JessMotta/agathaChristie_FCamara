@@ -34,8 +34,11 @@ Esse projeto foi realizado para o Desafio Mulheres Inspiradoras da FCamara, onde
 
  
 ## Links para o projeto 🔗
- 1. Figma: https://www.figma.com/file/NmVj8cjSnTwIZ1eQp6iRH2/Desafio-Mulheres-%7C-FCamara?node-id=0%3A1
- 2. Site: https://jessmotta.github.io/agathaChristie_challengeFCamara/
+ 
+ <img align="center" alt="Jess-Figma" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg">
+ Figma: https://www.figma.com/file/NmVj8cjSnTwIZ1eQp6iRH2/Desafio-Mulheres-%7C-FCamara?node-id=0%3A1
+ 
+ 💻 Site: https://jessmotta.github.io/agathaChristie_challengeFCamara/
   
 ## Linguagens utilizadas :desktop_computer:	
   
