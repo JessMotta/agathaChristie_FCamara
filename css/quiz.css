@@ -2,6 +2,10 @@
 @import url("../css/style.css");
 
 
+.quiz{
+  height: 100vh;
+}
+
 #quiz__content {
   margin: 2.5rem;
   display: flex;
