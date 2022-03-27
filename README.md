@@ -21,7 +21,7 @@ Esse projeto foi realizado para o Desafio Mulheres Inspiradoras da FCamara, onde
   
   
   
-![readme_mulheres_inspiradoras](https://user-images.githubusercontent.com/30941796/160292781-9cd6131c-13fb-4fd9-a038-5acadad1dbc1.png)
+![readme_mulheres_inspiradoras](https://user-images.githubusercontent.com/30941796/160293856-c9f00349-9ff5-4ab6-9120-824c1600e463.png)
 
 
 ## Implementações :information_source:
