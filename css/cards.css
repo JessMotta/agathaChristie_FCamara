@@ -42,3 +42,27 @@
     font-size: 1rem;
     padding: 0 0.5rem;
 }
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .card__container{
+    margin-top: 2rem;
+    }
+}
+
+/* DESKTOP */
+@media  screen and (min-width: 1024px) {
+    .card__container{
+        width: 150px;
+        height: 220px;
+        margin-top: 5rem;
+    }
+
+    .card--back{
+        width: 150px;
+    }
+
+    .card__info{
+        font-size: 1.5rem;
+    }
+}
