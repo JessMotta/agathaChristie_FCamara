@@ -1,6 +1,7 @@
 @import url("../css/buttons.css");
 @import url("../css/style.css");
 
+
 #quiz__content {
   margin: 2.5rem;
   display: flex;
@@ -53,7 +54,6 @@
   border: 1px solid #ececec;
   border-radius: 5px;
   margin-bottom: 0.625rem;
-  position: relative;
 }
 
 .questions ol li {
@@ -89,6 +89,7 @@
   /* margin-top: 2rem; */
   color: white;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 #gameOver {
