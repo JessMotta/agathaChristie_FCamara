@@ -31,7 +31,11 @@ Esse projeto foi realizado para o Desafio Mulheres Inspiradoras da FCamara, onde
 4. Quando o jogo é concluído aparecem dois botões, um de "Jogar novamente", onde a pontuação será zerada e o volta para a primeira questão
 5. E o botão de "Início" que vai para a primeira tela (home)
 6. O site está responsivo para diferentes tamanhos de tela
-  
+
+ 
+## Links para o projeto 🔗
+ 1. Figma: https://www.figma.com/file/NmVj8cjSnTwIZ1eQp6iRH2/Desafio-Mulheres-%7C-FCamara?node-id=0%3A1
+ 2. Site: https://jessmotta.github.io/agathaChristie_challengeFCamara/
   
 ## Linguagens utilizadas :desktop_computer:	
   
