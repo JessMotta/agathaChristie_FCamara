@@ -30,6 +30,7 @@ Esse projeto foi realizado para o Desafio Mulheres Inspiradoras da FCamara, onde
 3. Quando o usuário responde corretamente a caixa de questões pisca verde, quando o usuário responde incorretamente a caixa de questões pisca vermelho 
 4. Quando o jogo é concluído aparecem dois botões, um de "Jogar novamente", onde a pontuação será zerada e o volta para a primeira questão. E o botão de "Início" que vai para a primeira tela (home)
 5. O site está responsivo para diferentes tamanhos de tela
+6. O site foi desenvolvido com base no Mobile First
 
  
 ## Links para o projeto 🔗
